@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>{$catname}-{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    {template "content","meta"}
+</head>
+
+<body>
+{template "content","header"}
+<div class="gcont">
+        <div class="row">
+            <div class="gj-lg-8">
+
+                <div class="gj-wk gcl-hb">
+                    <nav class="gj-ljdh">
+                        <!--路径导航模块-->
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <a href="{siteurl($siteid)}">主页</a> > {catpos($catid)}
+                    </nav>
+                    <div class="gj-body gul-tuw1">
+                        {pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+                        {php $categorys = getcache('category_content_'.$siteid,'commons');}
+                        {loop $data $r}
+                        {php $category = $categorys[$r[catid]];}
+                        {php $modelid = $category['modelid'];}
+                        {php $db = pc_base::load_model('hits_model'); $_r = $db->get_one(array('hitsid'=>'c-'.$modelid.'-'.$r[id])); $views = $_r[views]; }
+                        {php $comment_tag = pc_base::load_app_class("comment_tag", "comment"); $comment_total = $comment_tag->count(array('commentid'=>'content_'.$r[catid].'-'.$r[id].'-'.$modelid));}
+                        <div class="gtw-ul gclear">
+                            <div class="gtw-img">
+                                <a href="{$r[url]}"><img src="{thumb($r['thumb'])}" alt="{$r[title]}"></a>
+                            </div>
+                            <div class="gtw-body">
+                                <a href="{$r[url]}">
+                                    <h4>{$r[title]}</h4>
+                                </a>
+                                <p>{$r['description']}...</p>
+                                <div class="gtw-sx">
+                                    <i class="fa fa-user"> {$r['username']}</i>
+                                    <i class="fa fa-clock-o"> {date('Y-m-d',$r[inputtime])}</i>
+                                    <i class="fa fa-eye"> {$views}</i>
+                                </div>
+                            </div>
+                        </div>
+                        {/loop}
+                    </div>
+                    <nav class="gj-page">{$pages}</nav>
+                    {/pc}
+                </div>
+            </div>
+            <div class="gj-lg-4">
+
+                <div class="gj-wk gcl-hb">
+                    <!--侧栏-图文列表-->
+                    <div class="gj-bt"><h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 头条推荐</h3></div>
+                    {pc:content action="position" posid="2" order="listorder DESC" num="5"}
+                    {loop $data $r}
+                    <div class="gj-body gli-tuw1">
+                        <div class="gtw-li gclear">
+                            <div class="gtw-img gj-left"> <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt=""></a> </div>
+                            <div class="gtw-body">
+                                <a href="{$r['url']}"><h4>{$r['title']}</h4></a>
+                                <span><i class="fa fa-clock-o"> {date('Y-m-d',$r[inputtime])}</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    {/loop}
+                    {/pc}
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <div class="gj-bt"><h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 最新文章</h3></div>
+                    {pc:content action="lists" catid="$catid" num="5" order="inputtime DESC"}
+                    {loop $data $r}
+                    <div class="gj-body gli-tuw1">
+                        <div class="gtw-li gclear">
+                            <div class="gtw-img gj-left"> <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt=""></a> </div>
+                            <div class="gtw-body">
+                                <a href="{$r['url']}"><h4>{$r['title']}</h4></a>
+                                <span><i class="fa fa-clock-o"> {date('Y-m-d',$r[inputtime])}</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    {/loop}
+                    {/pc}
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <!--标签模块-->
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-tags" aria-hidden="true"></i> 热门标签</h3>
+                    </div>
+                    <div class="gj-body gj-link3">
+                        <ul>
+                            {pc:content action="category" catid="0" num="0" siteid="$siteid" order="catid ASC"}
+                            {loop $data $r}
+                            <li><a href="{$r[url]}">{$r[catname]}</a></li>
+                            {/loop}
+                            {/pc}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{template "content","footer"}
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<nav class="gj-nav1 gcl-yh">
+    <!--响应式导航栏-->
+    <div class="gnav gclear">
+        <div class="gj-logo gj-left">
+            <img class="img" style="width: 100%; height: 30px; margin: 10px 0;" src="{APP_PATH}/statics/10/images/logo.png" alt="{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}" title="{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}"/>
+        </div>
+        <i class="gbar fa fa-bars" aria-hidden="true"></i>
+        <ul class="gnav-ul gj-right">
+
+            <li class="{if $catid==''} gxz {/if}"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> 首页</a></li>
+            {pc:content action="category" catid="0" num="0" siteid="$siteid" order="catid ASC"}
+            {loop $data $r}
+            <li class="{if $catid==$r['catid']} gxz {/if}"><a href="{$r[url]}">{$r[catname]}</a></li>
+            {/loop}
+            {/pc}
+
+        </ul>
+    </div>
+</nav>
