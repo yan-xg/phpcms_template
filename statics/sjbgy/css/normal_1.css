@@ -1,0 +1,598 @@
+﻿blockquote,body,button,caption,dd,div,dl,dt,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,html,input,legend,li,menu,ol,p,pre,table,td,textarea,th,ul
+{
+	margin:0;
+	padding:0;
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+caption,th
+{
+	text-align:left;
+	font-weight:400;
+}
+
+abbr,body,fieldset,html,iframe,img
+{
+	border:0;
+}
+
+address,cite,dfn,em,i,var
+{
+	font-style:normal;
+}
+
+li
+{
+	list-style:none;
+}
+
+h1,h2,h3,h4,h5,h6,small
+{
+	font-size:100%;
+}
+
+sub,sup
+{
+	font-size:83%;
+}
+
+code,kbd,pre,samp
+{
+	font-family:inherit;
+}
+
+q:after,q:before
+{
+	content:none;
+}
+
+textarea
+{
+	overflow:auto;
+	resize:none;
+}
+
+label,summary
+{
+	cursor:default;
+}
+
+a,button
+{
+	cursor:pointer;
+}
+
+b,em,h1,h2,h3,h4,h5,h6,strong
+{
+	font-weight:400;
+}
+
+a,a:hover,del,ins,s,u
+{
+	text-decoration:none;
+}
+
+br
+{
+	display:block;
+	line-height:0;
+	height:0;
+}
+
+body,button,input,keygen,legend,select,textarea
+{
+	font:14px/1.5 Helvetica,arial,微软雅黑,Microsoft YaHei,freesans,clean,sans-serif;
+	outline:0;
+	color:#1b1b1b;
+}
+
+.f-cb:after
+{
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+	content:".";
+}
+
+.f-cb
+{
+	zoom:1;
+}
+
+a
+{
+	color:#1b1b1b;
+}
+
+.g-wp
+{
+	width:1100px;
+	margin:0 auto;
+}
+
+.m-hd
+{
+	width:100%;
+	background:#446da3;
+	color:#a9d1ff;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:4;
+	font-size:15px;
+}
+
+.m-nav a,.m-nav span
+{
+	float:left;
+	line-height:40px;
+	margin-right:20px;
+	color:#a9d1ff;
+}
+
+.m-nav span
+{
+	position:relative;
+	cursor:pointer;
+	z-index:3;
+}
+
+.more-list
+{
+	display:none;
+	width:320px;
+	position:absolute;
+	background:#446da3;
+	top:40px;
+	left:-5px;
+	z-index:2;
+}
+
+.more-list a
+{
+	float:left;
+	display:block;
+	min-width:60px;
+	text-align:center;
+	font-size:15px;
+	margin-right:0;
+	padding:0 10px;
+}
+
+.more-list a:hover
+{
+	background:#537cb0;
+}
+
+.m-meta
+{
+	float:right;
+	position:relative;
+}
+
+.m-meta>a
+{
+	width:30px;
+	float:left;
+	line-height:30px;
+	margin-left:5px;
+	margin-top:5px;
+	margin-right:5px;
+	color:#a9d1ff;
+	text-align:center;
+}
+
+.m-meta a.active
+{
+	background:#537cb0;
+	border-radius:5px;
+}
+
+.m-meta .usr
+{
+	display:none;
+	width:auto;
+}
+
+.m-login
+{
+	background:url(../images/i_user.gif) no-repeat 5px 50% #9d0305;
+	color:#fff;
+	line-height:30px;
+	padding-left:22px;
+	padding-right:12px;
+	border-radius:5px;
+	margin-top:5px;
+	cursor:pointer;
+	float:left;
+}
+
+.m-login:hover
+{
+	background-color:#b0090b;
+}
+
+.m-meta .loginout
+{
+	width:auto;
+	display:none;
+}
+
+.sn-header-form
+{
+	display:none;
+	position:absolute;
+	width:320px;
+	padding-bottom:25px;
+	background:#fff;
+	color:#000;
+	z-index:1;
+	top:40px;
+	left:-137px;
+	border:1px solid #cfcfcf;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+	box-shadow:0 0 3px rgba(0,0,0,.2);
+}
+
+.legend
+{
+	background:#f5f5f6;
+	overflow:hidden;
+	zoom:1;
+}
+
+.legend h3
+{
+	float:left;
+	line-height:40px;
+	display:inline;
+	font-weight:400;
+	font-size:16px;
+	margin-left:20px;
+}
+
+.register-area
+{
+	font-size:12px;
+	line-height:40px;
+	margin-right:15px;
+	float:right;
+}
+
+.register-area .register-btn
+{
+	float:none;
+	color:#3f89ec!important;
+	display:inline;
+	padding:0;
+}
+
+.register-area .register-btn:hover
+{
+	text-decoration:underline;
+}
+
+.sn-header-form .legend .close
+{
+	color:#000!important;
+	line-height:40px;
+	height:40px;
+	float:right;
+	font-size:18px;
+	margin:0 5px 0 0;
+	padding:0;
+}
+
+.form-field
+{
+	padding:0 20px;
+}
+
+.login-error
+{
+	color:#888;
+	font-size:12px;
+	height:30px;
+	line-height:30px;
+}
+
+.login-error label
+{
+	padding-left:6px;
+}
+
+.sn-header-form .login-cls
+{
+	width:254px;
+	padding:10px 0 10px 24px;
+}
+
+.sn-header-form .code-cls,.sn-header-form .login-cls
+{
+	outline:0;
+	vertical-align:middle;
+	float:left;
+	border:1px solid #ddd;
+	margin-bottom:16px;
+	color:#888;
+}
+
+.sn-header-form .code-cls
+{
+	width:95px;
+	margin-right:10px;
+	padding:10px 0 10px 10px;
+}
+
+.ver-code img
+{
+	height:43px;
+	float:left;
+}
+
+.code-change
+{
+	font-size:14px;
+	float:right;
+	margin-top:24px;
+	color:#000;
+}
+
+.login-user
+{
+	background:url(../images/icon-user.gif) no-repeat 5px 12px;
+}
+
+.login-pw
+{
+	background:url(../images/icon-pw.gif) no-repeat 5px 12px;
+}
+
+.login-meta
+{
+	line-height:16px;
+	font-size:12px;
+	clear:both;
+	text-align:left;
+}
+
+.sn-header-form .login-meta a
+{
+	font-size:14px;
+	color:#000;
+	display:inline-block;
+	float:none;
+	margin:0;
+	padding:0;
+}
+
+.code-change:hover,.sn-header-form .login-meta a:hover
+{
+	color:#3668a5;
+}
+
+.sn-header-form-login
+{
+	width:280px;
+	height:45px;
+	line-height:45px;
+	font-size:18px;
+	margin-top:10px;
+	border:1px solid #1e68a5;
+	background:#3668a5;
+	cursor:pointer;
+	text-align:center;
+	color:#fff;
+	font-family:微软雅黑;
+}
+
+.sn-header-form-login:hover
+{
+	background-color:#3382c7;
+}
+
+.login-dv
+{
+	text-align:center;
+	margin:5px 0;
+}
+
+.sn-header-form .social-area a
+{
+	border-radius:0;
+	float:right;
+	background:url(../images/social_btn.png) no-repeat 0 0;
+	width:86px;
+	height:39px;
+	line-height:39px;
+	color:#333;
+	margin:0 8px 0 0;
+	padding:0 0 0 50px;
+}
+
+.sn-header-form a.social-weibo
+{
+	background-position:-138px 0;
+}
+
+.sn-header-form a.social-weibo:hover
+{
+	background-position:-138px -39px;
+	color:#679463;
+}
+
+.sn-header-form a.social-qq
+{
+	margin-right:0;
+}
+
+.sn-header-form a.social-qq:hover
+{
+	background-position:0 -39px;
+	color:#c16f42;
+}
+
+.m-shd
+{
+	background:#5ca2f3;
+	height:62px;
+}
+
+.m-logo
+{
+	float:left;
+	margin-top:3px;
+	margin-bottom:1px;
+}
+
+.m-search .search_text select
+{
+	display:none;
+}
+
+.m-search .search_form
+{
+	margin-top:16px;
+	float:right;
+	height:30px;
+	position:relative;
+}
+
+.m-search .search_selected
+{
+	width:62px;
+	height:30px;
+	line-height:30px;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	padding-left:10px;
+	cursor:pointer;
+	background:url(../images/i-icon11.png) no-repeat 56px 50% #76b4fe;
+	color:#fff;
+}
+
+.m-search .search_menu ul
+{
+	position:absolute;
+	top:30px;
+	background:#76b4fe;
+	display:none;
+	left:0;
+	z-index:2;
+}
+
+.m-search .search_menu li
+{
+	width:64px;
+	height:30px;
+	padding-left:8px;
+	line-height:30px;
+	cursor:pointer;
+	color:#fff;
+}
+
+.m-search .search_menu li:hover,.selected
+{
+	background:#408cd7;
+	color:#fff;
+}
+
+.m-search .search
+{
+	width:200px;
+	height:30px;
+	border:0;
+	outline:0;
+	line-height:30px;
+	background:#76b4fe;
+	color:#fff;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	padding:0 30px 0 5px;
+}
+
+.m-search .search_btn
+{
+	width:30px;
+	height:30px;
+	line-height:30px;
+	border:0;
+	background:url(../images/i-icon5.png) 50% no-repeat;
+	color:#fff;
+	cursor:pointer;
+	text-indent:-400px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.m-ft
+{
+	margin-top:40px;
+	background-color:#fff;
+	border-top:1px solid #cfcfcf;
+	clear:both;
+	font:14px/1.5 Helvetica Neue,å¾®è½¯é›…é»�?Microsoft Yahei,Helmet,Freesans,sans-serif;
+	text-align:left;
+	padding:20px 0;
+}
+
+.m-ft p
+{
+	margin-top:5px;
+}
+
+.m-ft a,.m-ft span
+{
+	color:#000;
+	margin:0 5px;
+}
+
+.m-ft a:hover
+{
+	color:#487dbe;
+}
+
+address,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,.m-nav span:hover .more-list,#form
+{
+	display:block;
+}
+
+[hidefocus],summary,.m-search .search_menu
+{
+	outline:0;
+}
+
+.m-nav,.m-search .search,.m-search .search_btn,.m-search .search_menu,.m-search .search_selected,.m-search .search_text
+{
+	float:left;
+}
+/*
+     FILE ARCHIVED ON 08:05:27 Sep 29, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:52:08 Nov 30, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 169.195
+  exclusion.robots: 0.072
+  exclusion.robots.policy: 0.065
+  cdx.remote: 0.07
+  esindex: 0.009
+  LoadShardBlock: 107.627 (3)
+  PetaboxLoader3.datanode: 131.971 (4)
+  CDXLines.iter: 14.263 (3)
+  load_resource: 77.792
+  PetaboxLoader3.resolve: 45.594
+*/

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>{$catname}-现代农业经济网</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link href="{APP_PATH}statics/sjbgy/css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{APP_PATH}statics/sjbgy/css/list.css">
+    <link rel="stylesheet" href="{APP_PATH}statics/sjbgy/css/normal.css">
+    <script src="{APP_PATH}statics/sjbgy/js/jquery-1.10.2.min.js"></script>
+    <base target="_blank"/>
+</head>
+</head>
+<body>
+{template "content","header"}
+<div class="m-crm g-wp">
+    <strong>当前位置:</strong> <a href="{siteurl($siteid)}">主页</a><span> > </span>{catpos($catid)}
+</div>
+<div class="m-content g-wp f-cb" id="content">
+    <div class="main">
+
+        <div class="m-lists">
+            {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+            {loop $data $r}
+            <div class="itm j-link"><a href="{$r[url]}"><img src="{thumb($r['thumb'])}" alt="{$r[title]}"/></a>
+                <div class="pw"><h3><a href="{$r[url]}">{$r[title]}</a></h3>
+                    <div class="pa">{$r[description]}</div>
+                    <div class="meta">
+                        <div class="time">{date("m月d日",$r[updatetime])}</div>
+                    </div>
+                </div>
+            </div>
+            {if $n%30 ==0}<li class="bk20 hr"></li>{/if}
+            {/loop}
+            {/pc}
+
+        </div>
+        <div id="displaypagenum" totalcount="50" currentpage="1">
+            <div class="pagepage">{$pages}</div>
+        </div>
+    </div>
+    <div class="aside">
+        <div class="ad_zone" id="2014_ad02"></div>
+        <div class="m-rank">
+            <div class="m-tit">新闻排行</div>
+            <dl class="GsNewsRank">
+                {pc:content action="lists" catid="$catid" num="10" order="updatetime DESC" cache="3600"}
+                {loop $data $r}
+                <dt><em><span class='num'>{$n}</span></em><a href="{$r['url']}">{$r['title']}</a></dt>
+                {/loop}
+                {/pc}
+            </dl>
+        </div>
+        <div class="m-rec">
+            <div class="m-tit">特别推荐</div>
+            <div class="m-tj">
+                <div class="m-tjl">
+                    {pc:content action="position" posid="10" order="id DESC" num="1"}
+                    {loop $data $r}
+                    <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/><h3>{$r['title']}</h3></a>
+                    {/loop}
+                    {/pc}
+                </div>
+                <div class="m-list7">
+                    {pc:content action="position" posid="10" order="id DESC" start="1" num="4"}
+                    {loop $data $r}
+                    <div class="itm">
+                        <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/></a>
+                        <h3><a href="{$r['url']}">{$r['title']}</a></h3>
+                    </div>
+                    {/loop}
+                    {/pc}
+                </div>
+            </div>
+        </div>
+        <div class="ad_zone" id="2014_ad04"></div>
+    </div>
+</div>
+{template "content","footer"}
+</body>
+</html>

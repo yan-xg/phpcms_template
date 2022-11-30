@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link href="{APP_PATH}statics/sjbgy/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="{APP_PATH}statics/sjbgy/css/index.css" rel="stylesheet" type="text/css"/>
+    <script src="{APP_PATH}statics/sjbgy/js/jquery-1.10.2.min.js"></script>
+    <script src="{APP_PATH}statics/sjbgy/js/tptt.js"></script>
+    <base target="_blank"/>
+    <style type="text/css">
+        .youth-hotline center a {
+            margin: 0px 0px;
+        }
+    </style>
+</head>
+<body>
+{template "content","header"}
+<div class="concent">
+    <div class="youth-title floleft">
+        <h1>滚动新闻:</h1>
+        <div class="youth-title-gund">
+            <div class="gudn" id="demo" style="overflow:hidden; ">
+                <div style="width:8000%; ">
+                    <div id="demo1">
+                        <p>
+						{pc:content action="lists_news" num="20" order="id DESC"}
+						{loop $data $r}
+							<a href="{$r['url']}">{$r['title']}</a>
+						{/loop}
+						{/pc}
+                        </p>
+                    </div>
+                    <div id="demo2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="youth-hotline">
+        <div class="youth_tt" style="float:left">
+            <div class=TRS_Editor>
+                {pc:content action="lists_news" num="1" order="id DESC"}
+                {loop $data $r}
+                <h1><a href="{$r['url']}">{str_cut($r['title'],45)}</a></h1>
+                {/loop}
+                {/pc}
+                <center>
+                    {pc:content action="position" posid="2" order="id DESC" num="3"}
+                    {loop $data $r}
+                    <a href="{$r['url']}">{$r['title']}</a>
+                    {/loop}
+                    {/pc}
+                </center>
+            </div>
+
+        </div>
+        <div class="tt_banner">
+            <img src="{APP_PATH}statics/sjbgy/images/banner.jpg" alt="banner.jpg" width='240' height='60'/>
+        </div>
+    </div>
+    <div class="youth-con">
+        <div class="left-con floleft">
+            <ul class="new-list">
+
+                <div class=TRS_Editor>
+                    {pc:content action="lists" catid="3" num="6" order="id DESC"}
+                    {loop $data $r}
+                    <li><a href="{$r['url']}">{str_cut($r['title'],45)}</a></li>
+                    {/loop}
+                    {/pc}
+                </div>
+                <div class=TRS_Editor>
+                    {pc:content action="lists" catid="3" start="6" num="1" order="id DESC"}
+                    {loop $data $r}
+                    <li><b>
+                        <img width="56" height="28" style="margin-bottom: 2px;vertical-align: middle;" ignore="1" complete="complete" src="{APP_PATH}statics/sjbgy/images/tou.png" alt="现代农业经济网"/>
+                        <a href="{$r['url']}">{str_cut($r['title'],35)}</a>
+                    </b></li>
+                    {/loop}
+                    {/pc}
+
+                    {pc:content action="lists" catid="3" start="7" num="5" order="id DESC"}
+                    {loop $data $r}
+                    <li><a href="{$r['url']}">{str_cut($r['title'],45)}</a></li>
+                    {/loop}
+                    {/pc}
+                </div>
+            </ul>
+        </div>
+        <div class="right-con floright">
+            <div id="focus" class="jsArea floleft ">
+                <div class="slidContrlDiv">
+                    <ol>
+                        <li class="current"><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                    </ol>
+                </div>
+                <div class="slidImgDiv">
+                    <ul>
+                        {pc:content action="position" posid="1" order="id DESC" num="5"}
+                        {loop $data $r}
+                        <li>
+                            <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" width='620' height='370' alt="{$r['url']}"/></a>
+                            <div class="txt">
+                                <a href="{$r['url']}">{$r['title']}</a>
+                            </div>
+                            <span class="marking"></span>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-wp ad ad-banner" style="margin-bottom:10px"><div id="index_ad04"></div></div>
+        <img class="g-wp" style="display:block;margin-top: 5px;margin-bottom: 10px;" src="{APP_PATH}statics/sjbgy/images/adtl.jpg" alt="现代农业经济网">
+
+        <div class="m-part2w g-wp">
+            <div class="m-part2">
+                <div class="row f-cb">
+                    {pc:get sql="select * from phpcms_category where parentid=0 order by catid asc" num="18" start="1" return="cate"}
+                    {loop $cate $k $c}
+                    <div class="itm">
+                        <div class="m-tit2"><h2><a href="{$c[url]}">{$c[catname]}</a></h2>
+                            <div class="link"><a href="{$c[url]}">>>更多</a></div>
+                        </div>
+                        <div class="hl">
+                            {pc:content action="position" posid="12" catid="$c[catid]" num="1" order="id DESC"}
+                            {loop $data $r}
+                            <a href="{$r['url']}">
+                                <img src="{thumb($r['thumb'])}" alt="{$r['title']}"/>
+                                <h3>{$r['title']}</h3>
+                            </a>
+                            {/loop}
+                            {/pc}
+                        </div>
+                        <ul class="m-list1 m-list2">
+                            {pc:content action="lists" catid="$c[catid]" start="1" num="5" order="id DESC"}
+                            {loop $data $r}
+                            <li><a href="{$r['url']}">{str_cut($r['title'],45)}</a></li>
+                            {/loop}
+                            {/pc}
+                        </ul>
+                    </div>
+
+                    {$k++}
+                    {if $k%3 ==0}
+                    </div>
+                        {if $k ==9}<img class="g-wp" style="display:block;margin-top: 5px;margin-bottom: 10px;" src="{APP_PATH}statics/sjbgy/images/cha.jpg" alt="现代农业经济网">{/if}
+                    <div class="row f-cb">
+                    {/if}
+                    {/loop}
+                    {/pc}
+                </div>
+            </div>
+
+            <div class="m-picw g-wp">
+                <div class="m-pict"><h2>图片大观</h2></div>
+                <div class="tu_box">
+                    <div class="tu_con-fl">
+                        <ul>
+
+                            {pc:content action="position" posid="1" order="id DESC" start="5" num="6"}
+                            {loop $data $r}
+                            <li>
+                                <div class="box_pic">
+                                    <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/></a>
+                                    <p><a href="{$r['url']}">{$r['title']}</a></p>
+                                </div>
+                            </li>
+                            {/loop}
+                            {/pc}
+                        </ul>
+                    </div>
+                    <div class="tu_con-fr">
+                        <div class="box_pic01">
+                            {pc:content action="position" posid="1" order="id DESC" start="11" num="1"}
+                            {loop $data $r}
+                            <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/></a>
+                            <p><a href="{$r['url']}">{$r['title']}</a></p>
+                            {/loop}
+                            {/pc}
+                        </div>
+                        <div class="box_pic02">
+                            <ul>
+                                {pc:content action="position" posid="1" order="id DESC" start="12" num="2"}
+                                {loop $data $r}
+                                <li>
+                                    <div class="box_pic">
+                                        <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/></a>
+                                        <p><a href="{$r['url']}">{$r['title']}</a></p>
+                                    </div>
+                                </li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="youth-link" style="margin:15px 0px;margin-bottom: 10px;">
+                <div class="youth-link-con">
+                    <ul class="f_end">
+                        <li>
+                            <span style="margin: 0px 10px 57px 0px;">友情链接:</span>
+                            {pc:link  action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+                            {loop $dat $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}
+
+                            {pc:link  action="type_list" siteid="$siteid" linktype="1" order="listorder DESC" num="8" return="pic_link"}
+                            {loop $pic_link $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            {template "content","footer"}
+            <!-- /footer -->
+
+</body>
+<script type="text/javascript">
+    var demo = document.getElementById("demo");
+    var demo1 = document.getElementById("demo1");
+    var demo2 = document.getElementById("demo2");
+    demo2.innerHTML = document.getElementById("demo1").innerHTML;
+
+    function Marquee() {
+        if (demo.scrollLeft - demo2.offsetWidth >= 0) {
+            demo.scrollLeft -= demo1.offsetWidth;
+        } else {
+            demo.scrollLeft++;
+        }
+    }
+
+    var myvar = setInterval(Marquee, 30);
+    $("#demo").mouseout(function () {
+        myvar = setInterval(Marquee, 30);
+    })
+    $("#demo").mouseover(function () {
+        clearInterval(myvar);
+    })
+</script>
+</html>

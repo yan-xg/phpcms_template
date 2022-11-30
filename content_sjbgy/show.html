@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>{$title}-现代农业经济网</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link href="{APP_PATH}statics/sjbgy/css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{APP_PATH}statics/sjbgy/css/article.css">
+    <link rel="stylesheet" href="{APP_PATH}statics/sjbgy/css/normal.css">
+<!--    <script src="http://www.southcn.com/public/2016/pc/js/jquery-1.10.2.min.js"></script>-->
+    <script src="{APP_PATH}statics/sjbgy/js/jquery-1.10.2.min.js"></script>
+    <base target="_blank"/>
+</head>
+</head>
+<body>
+{template "content","header"}
+<div class="m-crm g-wp">
+    <strong>当前位置:</strong> <a href="{siteurl($siteid)}">主页</a><span> &gt; </span>{catpos($catid)}
+</div>
+<div class="m-content g-wp f-cb">
+    <div class="main">
+        <div class="m-article">
+            <h2 id="article_title">{$title}</h2>
+
+            <div class="meta">
+                <div class="fl">
+                    <span class="pub_time"
+                          id="pubtime_baidu">{$updatetime}</span>
+                    <span id="source_baidu">来源：{$copyfrom}</span>
+                </div>
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#"
+                                                                                                  class="bds_qzone"
+                                                                                                  data-cmd="qzone"
+                                                                                                  title="分享到QQ空间"></a><a
+                        href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq"
+                                                                                           data-cmd="tqq"
+                                                                                           title="分享到腾讯微博"></a><a
+                        href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin"
+                                                                                            data-cmd="weixin"
+                                                                                            title="分享到微信"></a></div>
+            </div>
+            <div class="content" id="content">
+                {$content}
+            </div>
+
+
+        </div>
+
+        <div class="m-rel">
+            <div class="m-tit2">相关新闻</div>
+            <script>document.write(unescape('%3Cdiv id="hm_t_122929"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://crs.baidu.com/t.js?siteId=1264b36b9538c4777aa3f0fd34591920&planId=122929&async=0&referer=') + encodeURIComponent(document.referrer) + '&title=' + encodeURIComponent(document.title) + '&rnd=' + (+new Date) + unescape('"%3E%3C/script%3E'));</script>
+        </div>
+
+    </div>
+    <div class="aside">
+        <div class="ad_zone" id="2014_ad02"></div>
+        <div class="m-rank">
+            <div class="m-tit">新闻排行</div>
+            <dl class="GsNewsRank">
+                {pc:content action="lists" catid="$catid" num="10" order="updatetime DESC" cache="3600"}
+                {loop $data $r}
+                <dt><em><span class='num'>{$n}</span></em><a href="{$r['url']}">{$r['title']}</a></dt>
+                {/loop}
+                {/pc}
+
+            </dl>
+        </div>
+        <div class="m-rec">
+            <div class="m-tit">特别推荐</div>
+            <div class="m-tj">
+                <div class="m-tjl">
+                    {pc:content action="position" posid="10" order="id DESC" num="1"}
+                    {loop $data $r}
+                    <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/><h3>{$r['title']}</h3></a>
+                    {/loop}
+                    {/pc}
+                </div>
+                <div class="m-list7">
+                    {pc:content action="position" posid="10" order="id DESC" start="1" num="4"}
+                    {loop $data $r}
+                    <div class="itm">
+                        <a href="{$r['url']}"><img src="{thumb($r['thumb'])}" alt="{$r['title']}"/></a>
+                        <h3><a href="{$r['url']}">{$r['title']}</a></h3>
+                    </div>
+                    {/loop}
+                    {/pc}
+                </div>
+            </div>
+        </div>
+        <div class="ad_zone" id="2014_ad04"></div>
+    </div>
+</div>
+{template "content","footer"}
+</body>
+</html>
