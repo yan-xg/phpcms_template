@@ -1,0 +1,28 @@
+<!--公共头部-->
+<div class="header">
+    <div class="top clearfix">
+        <h1 class="logo">
+            <a href="/"><img src="{IMG_PATH}yxloog.jpg" alt="环球广播网"></a>
+        </h1>
+        <ul class="site-nav site-navbar">
+            <li class="navto-home"><a href="/">网站首页</a></li>
+
+            {pc:content action="category" catid="0" num="0" siteid="$siteid" order="catid ASC"}
+            {loop $data $r}
+            <li class="navto-li"><a href="{$r[url]}"> {$r[catname]}</a></li>
+            {/loop}
+            {/pc}
+        </ul>
+    </div>
+</div>
+<div class="header-M">
+    <ul class="site-nav-M site-navbar-M">
+        <li class="navto-home-M"><a href="/">网站首页</a></li>
+
+        {pc:content action="category" catid="0" num="0" siteid="$siteid" order="catid ASC"}
+        {loop $data $r}
+        <li class="navto-li-M"><a href="{$r[url]}"> {$r[catname]} </a></li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>

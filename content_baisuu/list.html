@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>{$catname}-环球广播新闻网(www.baisuu.net)</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/com.css" />
+    <link rel="stylesheet" href="{APP_PATH}statics/baisuu/newindex/com-M.css">
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/index.css" />
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/font-awesome.min.css" />
+    <meta http-equiv="mobile-agent" content="format=xhtml;url=/m/index.php">
+</head>
+
+<body>
+    <div class="">
+        {template "content","header"}
+        <div class="wrap">
+            <div class="double-post clearfix1">
+                <div class="double-list double-list-left sb br mr mb fl">
+                    <p class="c-title mob ">
+                        <a href="{siteurl($siteid)}">主页</a><span> > </span>{catpos($catid)}
+                    </p>
+                    <ul class="ul jq-hook">
+                        {pc:content action="lists" catid="$catid" num="30" order="id DESC" page="$page"}
+                        {loop $data $r}
+                        <li class="title clearfix">
+                            <i class="iconfont icon-right fl"></i>
+                            <a class="a ellipsis fl" href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+                            <span class="time fr">{date("m月d日",$r[updatetime])}</span>
+                        </li>
+                        {if $n%30 ==0}<li class="bk20 hr"></li>{/if}
+                        {/loop}
+                        <div class="pagination">{$pages}</div>
+                        {/pc}
+                    </ul>
+
+                </div>
+                <div class="double-list double-list-right sb br mr mb fl">
+                    <p class="c-title mob "> <span>最新文章</span></p>
+                    <ul class="ul jq-hook">
+                        {pc:content action="lists" catid="$catid" num="12" order="id DESC"}
+                        {loop $data $r}
+                        <li class="title clearfix">
+                            <i class="iconfont icon-right fl"></i>
+                            <a class="a ellipsis fl" href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+                            <span class="time fr">{date("m月d日",$r[updatetime])}</span>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                    <p class="c-title mob c-title-bottom"> <span>热门图片新闻</span></p>
+                    {pc:content action="position" posid="1" catid="$catid" num="6" order="id DESC"}
+                    {loop $data $r}
+                    <article class="item mb jq-remove-mb image {if $n%2==0} fr {else} fl {/if}">
+                        <a class="thumbnail" href="{$r[url]}" title="{$r[title]}">
+                            <img class="img-cover br" src="{thumb($r['thumb'])}" alt="{$r[title]}">
+                        <div class="absolute">
+                            <p class="title ellipsis">{$r[title]}</p>
+                            <div class="num clearfix">
+                                <span class="view ellipsis fl"><i class="iconfont icon-view"></i>183</span>
+                                <span class="comment ellipsis fl"><i class="iconfont icon-comment"></i></span>
+                                <time class="time ellipsis fr">{date("m月d日",$r[updatetime])}</time>
+                            </div>
+                        </div>
+                        <i class="iconfont icon-quote"></i> <i class="mask br"></i> </a>
+                    </article>
+                    {/loop}
+                    {/pc}
+                </div>
+            </div>
+            <!-- 友情链接 -->
+            <div class="cont cont9">
+                <div class="game_flink">
+                    <div class="hd">
+                        <div class="flink_tab">
+                            <ul>
+                                <li>
+                                    <p class="on">友情链接</p>
+                                </li>
+                            </ul>
+                            <b class="line"></b></div>
+                    </div>
+                    <div class="bd">
+                        <div class="flink_con clearfix">
+                            <ul>
+                                {pc:link  action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+                                {loop $dat $v}
+                                <li><a href="{$v[url]}" target="_blank">{$v[name]}</a></li>
+                                {/loop}
+                                {/pc}
+
+                                {pc:link  action="type_list" siteid="$siteid" linktype="1" order="listorder DESC" num="8" return="pic_link"}
+                                {loop $pic_link $v}
+                                <li><a href="{$v[url]}" target="_blank">{$v[name]}</a></li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {template "content","footer"}
+    </div>
+</body>
+
+</html>

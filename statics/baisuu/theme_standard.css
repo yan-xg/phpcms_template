@@ -1,0 +1,51 @@
+.Mblk_06 {
+	BORDER-LEFT-COLOR: #FFF;
+	BACKGROUND: #fff;
+	BORDER-BOTTOM-COLOR: #FFF;
+	BORDER-TOP-COLOR: #d1e3f4;
+	BORDER-RIGHT-COLOR: #FFF;
+	clear: left;
+	float: left;
+	width: 325px;
+}
+.Mblk_088 {
+	BACKGROUND: #fff;
+	clear: left;
+	float: left;
+	width: 303px;
+	padding-top: 8px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.Mblk_06_1 {
+	BORDER-LEFT-COLOR: #FFF;
+	BACKGROUND: #fff;
+	BORDER-BOTTOM-COLOR: #FFF;
+	BORDER-TOP-COLOR: #d1e3f4;
+	BORDER-RIGHT-COLOR: #FFF;
+	clear: left;
+	float: left;
+	width: 970px;!width: 964px;
+	text-align: left;
+	padding-right: 5px;!padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 5px;!padding-left: 0px;
+}
+.MTitle_01 {
+	BORDER-LEFT-COLOR: #FFF;
+	BORDER-BOTTOM-COLOR: #FFF;
+	BORDER-TOP-COLOR: #FFF;
+	BORDER-RIGHT-COLOR: #FFF;
+	background-repeat: repeat-x;
+	background-image: url(../images/con_mj_0010.gif);
+}
+.MTitle_01 .menu LABEL {
+	BORDER-LEFT-COLOR: #FFF;
+	BORDER-BOTTOM-COLOR: #FFF;
+	BORDER-TOP-COLOR: #FFF;
+	BORDER-RIGHT-COLOR: #FFF
+}
+.MTitle_01 .menu LABEL.selected {
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}

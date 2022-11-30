@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=11,IE=10,IE=9,IE=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <title>{$title}-环球广播网</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta name="robots" content="noindex,follow" />
+    <link rel="stylesheet" id="style-css" href="{APP_PATH}statics/baisuu/newindex/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/com.css" />
+    <link rel="stylesheet" href="{APP_PATH}statics/baisuu/newindex/com-M.css">
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/index.css" />
+    <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/baisuu/newindex/font-awesome.min.css" />
+    <style>.navbar-wrap{position:fixed}@media (max-width: 979px){body{margin-top: 0}.navbar-wrap{position:relative}}@media (max-width: 1024px){.sidebar{display:block}}</style>
+</head>
+<body>
+<div>
+    {template "content","header"}
+<section class="container">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="breadcrumbs">
+                你的位置：<a href="{siteurl($siteid)}">主页</a><span> &gt; </span>{catpos($catid)} 正文
+            </div>
+            <header class="article-header">
+                <h1 class="article-title">{$title}</h1>
+                <div class="meta">
+                    <time class="muted"><i class="ico icon-time icon12"></i>{$updatetime}</time>
+                </div>
+            </header>
+            <article class="article-content">
+                {$content}
+            </article>
+          
+            <nav class="article-nav">
+                上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a>
+			   <br/>
+                下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a>
+            </nav>
+          
+        </div>
+    </div>
+    <aside class="sidebar">
+        <!--一级推荐-->
+        <div class="widget widget_recent_entries">
+            <h3 class="widget_tit">最新文章</h3>
+            <ul>
+
+                {pc:content action="lists" catid="$catid" num="12" order="id DESC"}
+                {loop $data $r}
+                <li><a href="{$r[url]}">{str_cut($r['title'],50)}<span class="muted">{date("m月d日",$r[updatetime])}</span></a></li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+        <!--最新文章-->
+        <div class="widget widget_recent_entries clearfix">
+            <h3 class="widget_tit">热门图片新闻</h3>
+            <div class="double-list sb br mr mb fl" style="width: 100%;padding: 0;margin: 15px 0">
+                {pc:content action="position" posid="1" catid="$catid" num="6" order="id DESC"}
+                {loop $data $r}
+                <article class="item mb jq-remove-mb image {if $n%2==0} fr {else} fl {/if}">
+                    <a class="thumbnail" href="{$r[url]}" title="{$r[title]}">
+                        <img class="img-cover br" src="{thumb($r['thumb'])}" alt="{$r[title]}">
+                        <div class="absolute">
+                            <p class="title ellipsis">{$r[title]}</p>
+                            <div class="num clearfix">
+                                <span class="view ellipsis fl"><i class="iconfont icon-view"></i>183</span>
+                                <span class="comment ellipsis fl"><i class="iconfont icon-comment"></i></span>
+                                <time class="time ellipsis fr">{date("m月d日",$r[updatetime])}</time>
+                            </div>
+                        </div>
+                        <i class="iconfont icon-quote"></i> <i class="mask br"></i> </a>
+                </article>
+                {/loop}
+                {/pc}
+            </div>
+        </div>
+    </aside>
+</section>
+    {template "content","footer"}
+</div>
+</body>
+</html>

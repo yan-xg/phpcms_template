@@ -1,0 +1,1642 @@
+/* 网站链接总的css定义:可定义内容为链接字体颜色、样式等 */
+a{text-decoration: none;} /* 链接无下划线,有为underline */ 
+a:link {color: #333333;} /* 未访问的链接 */
+a:visited {color: #333333;} /* 已访问的链接 */
+a:hover{color: #333333;} /* 鼠标在链接上 */ 
+a:active {color: #333333;} /* 点击激活链接 */
+
+/* 网站总的css定义:哀悼颜色、样式等 */
+
+/* 顶部频道文字链接的css定义－－将顶部频道文字链接与网站链接总的css定义分开，以后可以制作深底浅字的格式，如果要保持原来的设计样式，将此定义内容删除或定义成与网站链接总的css相同即可。调用代码为<a class='channel' ***>***</a> */
+a.channel:link {color: #ffffff;}
+a.channel:visited {color: #ffffff;}
+a.channel:hover{color: #ffff00;}
+a.channel:active {color: #ffffff;}
+/* 乡镇联播导航链接白色文字链接的新闻中心css定义－－调用代码为<a class='xw_fy' ***>***</a> */
+a.xw_fy:link {color: #ffffff;}
+a.xw_fy:visited {color: #ffffff;}
+a.xw_fy:hover{color: #ffffff;}
+a.xw_fy:active {color: #ffffff;}
+
+/* 顶部当前频道文字链接的css定义－－调用代码为<a class='channel2' ***>***</a> */
+a.channel2:link {color: #ffff00;}
+a.channel2:visited {color: #ffff00;}
+a.channel2:hover{color: #ff6600;}
+a.channel2:active {color: #ffff00;}
+/* 顶部当前总频道文字链接的css定义－－调用代码为<a class='wyq1' ***>***</a> */
+a.wyq1:link {color: #005FA2;}
+a.wyq1:visited {color: #005FA2;}
+a.wyq1:hover{color: #FF0000;}
+a.wyq1:active {color: #FF0000;}
+/* 顶部当前频道文字链接的css定义－－调用代码为<a class='wyq2' ***>***</a> */
+a.wyq2:link {color: #FF0000;}
+a.wyq2:visited {color: #FF0000;}
+a.wyq2:hover{color: #005FA2;}
+a.wyq2:active {color: #005FA2;}
+/* 顶部头条文字链接的css定义－－调用代码为<a class='wyq_tt' ***>***</a> */
+a.wyq_tt:link {color: #005FA2;}
+a.wyq_tt:visited {color: #005FA2;}
+a.wyq_tt:hover{color: #005FA2;}
+a.wyq_tt:active {color: #005FA2;}
+/* 岳西网顶部导航蓝色文字链接的css定义－－调用代码为<a class='yxw_fy' ***>***</a> */
+a.yxw_fy:link {color: #005FA2;}
+a.yxw_fy:visited {color: #005FA2;}
+a.yxw_fy:hover{color: #000000;}
+a.yxw_fy:active {color: #005FA2;}
+/* 顶部当前频道文字链接的css定义－－调用代码为<a class='channel2' ***>***</a> */
+a.channel2:link {color: #ffff00;}
+a.channel2:visited {color: #ffff00;}
+a.channel2:hover{color: #ff6600;}
+a.channel2:active {color: #ffff00;}
+/* 底部版权信息文字链接的css定义－－与顶部频道文字链接定义的想法相同。可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。调用代码为<a class='bottom' ***>***</a> */
+a.bottom:link {color: #ffffff;}
+a.bottom:visited {color: #ffffff;}
+a.bottom:hover{color: #ffff00;}
+a.bottom:active {color: #ffffff;}
+/* 文章栏目标题文字链接的css定义－－可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。要相同可不设置。调用代码为<a class='class' ***>***</a> */
+a.class:link {color: #ffffff;}
+a.class:visited {color: #ffffff;}
+a.class:hover{color: #ff0000;}
+a.class:active {color: #ffffff;}
+
+
+
+
+
+/* body的css定义:对应css中“body”，可定义内容为网页字体颜色、背景、浏览器边框等 */
+/* CSS Document */
+body
+{ 
+	margin:0px;
+	font-size: 13px;
+	text-decoration: none;
+	scrollbar-face-color: #f6f6f6;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #cccccc;
+	scrollbar-3dlight-color: #cccccc;
+	scrollbar-arrow-color: #330000;
+	scrollbar-track-color: #f6f6f6;
+	scrollbar-darkshadow-color: #ffffff;
+	background-color: #EAEAEA;
+	background-image: url();
+	background-repeat: repeat-x;
+}
+/* 单元格的css定义:对应css中的“td”，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
+td
+{
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 160%;
+	font-weight: normal;
+	
+}
+/* 文本框的css定义:对应css中的“input”，这里为文本框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+/*input
+{
+background-color: #ffffff; 
+border-bottom: #666666 1px solid;
+border-left: #666666 1px solid;
+border-right: #666666 1px solid;
+border-top: #666666 1px solid;
+color: #666666;
+height: 18px;
+border-color: #666666 #666666 #666666 #666666; font-size: 9pt
+}
+/* 按钮的css定义:对应css中的“button”，这里为按钮的风格设置，可定义内容为背景、字体、颜色、边框等 */
+button
+{
+font-size: 9pt;height: 20px;
+}
+/* 下拉列表框的css定义:对应css中的“select”，这里为下拉列表框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+select
+{
+font-size: 9pt;height: 20px;
+}
+/* 顶部用户登录文字链接的css定义 */
+.top_userlogin
+{
+color: #037fa8;
+}
+/* 新闻头条外框css定义 */
+.toutiao {
+	border: 1px solid #D0888B;
+	left: 5px;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	padding: 5px;
+	clip:  rect(5px 5px 5px 5px);
+}
+/* 新闻首页频道css定义 */
+.neirong {
+	padding: 0px 5px;
+	border: 1px solid #4482BC;
+}
+/* 广告外框css定义 */
+.guanggao {
+	padding: 2px;
+	border: 1px solid #D7D7D7;
+}
+/* 首页版权外框等css定义 */
+.sybanquan {
+	padding: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #4482BC;
+	border-right-color: #4482BC;
+	border-left-color: #4482BC;
+}
+/* 首页小导航外框、文字等css定义 */
+.xdh_wyq {
+	font-size: 18px;
+	color: #AA0303;
+	background-image: url(/templets/default/images/xdh_wyq_ahyx.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 4px;
+	font-family: "黑体";
+}
+/* 新闻内容导航外框、文字等css定义 */
+.xinwendh {
+	color: #FFFFFF;
+a.xinwendh:link {color: #ffffff;} /* 未访问的链接 */
+a.xinwendh:visited {color: #ffffff;} /* 已访问的链接 */
+a.xinwendh:hover{color: #ffffff;} /* 鼠标在链接上 */ 
+a.xinwendh:active {color: #ffffff;} /* 点击激活链接 */
+}
+/* 新闻内容外框、等css定义 */
+.xwnr_wyq {
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+}
+/* 首页虚线等css定义 */
+.xuxian {
+	border-top: 1px dashed #CCCCCC;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+/* 首页虚线等css定义 */
+.xuxian1 {
+	border-top: 1px dashed #666666;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+/* 首页重点新闻红色等css定义 */
+.zdxwdh {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(/templets/default/images/zddht.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 4px;
+}
+/* 首页图看岳西等css定义 */
+.tkyx_wyq {
+	font-size: 12px;
+	font-weight: bold;
+	color: #005FA2;
+	padding: 1px;
+}
+/* 首页领导文集等css定义 */
+.lindao_wyq {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 1px;
+}
+/* 首页头条文字等css定义 */
+.ttwz_wyq {
+	font-family: "方正大黑简体";
+	font-size: 30px;
+	font-style: normal;
+	color: #005FA2;
+        	word-spacing: 5px;
+	font-weight: bolder;
+}
+/* 首页小分类文字等css定义 */
+.wyqtt1 {
+	float: left;
+	font-size: 12px;
+	color: #0033CC;
+	background-position: center bottom;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	background-image: url(/templets/default/images/xdh_wyq_ahyx.gif);
+	background-repeat: no-repeat;
+	line-height: 25px;
+	font-weight: bold;
+}
+/* 首页小分类2文字等css定义 */
+.wyqtt2 {
+	float: left;
+	font-size: 12px;
+	line-height: 25px;
+	color: #005FA2;
+	background-position: center bottom;
+	height: 25px;
+	width: 100px;
+	text-align: center;
+	background-image: url(/templets/default/images/xdh_wyq_ahyx2.gif);
+	background-repeat: no-repeat;
+}
+/* 首页小分类文字等css定义 */
+.wyqtt11 {
+	float: left;
+	background-position: center bottom;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	background-image: url(/templets/default/images/xdh_wyq_ahyx.gif);
+	background-repeat: no-repeat;
+	line-height: 25px;
+	font-size: 14px;
+}
+/* 首页小分类2文字等css定义 */
+.wyqtt22 {
+	float: left;
+	font-size: 12px;
+	line-height: 25px;
+	background-position: center bottom;
+	height: 25px;
+	width: 100px;
+	text-align: center;
+	background-image: url(/templets/default/images/xdh_wyq_ahyx2.gif);
+	background-repeat: no-repeat;
+}
+/* ==频道通用表格css定义开始== */
+.channel_border /* 灰色表格边框背景颜色定义(760) */
+{
+border: 1px solid #cccccc;
+}
+.channel_title /* 标题背景颜色定义(760) */
+{
+background: #cccccc;color: #037fa8;height: 27;text-align: center;font-weight:bold;
+}
+.channel_tdbg /* 表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+.channel_pager /* 分页表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+
+　　/* --评论显示页的css定义开始-- */
+.comment_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #449ae8;
+}
+.comment_title /* 标题背景颜色定义(760) */
+{
+background:#449ae8;color: #ffffff;font-weight: normal;height: 25;
+}
+.comment_tdbg1 /* 表格背景颜色定义(760) */
+{
+background:#ffffff;line-height: 120%;
+}
+.comment_tdbg2 /* 留言显示1px表格背景颜色定义 */
+{
+background:#fafafa;
+}
+　　/* --评论显示页的css定义结束-- */
+/* ==频道通用表格css定义结束== */ 
+
+/* ==简短标题文字的css定义开始== */
+/* [图文]简短标题文字的css定义 */
+.s_headline1
+{
+color: blue;
+}
+/* [组图]简短标题文字的css定义 */
+.s_headline2
+{
+color: #ff6600;
+}
+/* [推荐]简短标题文字的css定义 */
+.s_headline3
+{
+color: green;
+}
+/* [注意]简短标题文字的css定义 */
+.s_headline4
+{
+color: red;
+}
+/* ==简短标题文字的css定义开始== */
+
+/* ==top.asp中的css定义开始== */
+.top_tdbgall /* 顶部表格总背景颜色定义 */
+{
+width: 760;background:#ffffff;
+}
+.top_top
+{
+background:#0089f7;height: 2;
+}
+.top_channel /* 频道表格背景、文字颜色定义 */
+{
+background:#0089f7;color:#3ab1f5!important;text-align: right;border-top: 1px solid #ffffff;border-bottom: 1px solid #ffffff;
+}
+.top_announce /* 公告表格背景、文字颜色定义 */
+{
+background:url(/templets/default/images/blue/top_nav_menu.gif);color: #0560a6;height: 30;
+}
+.top_nav_menu /* 导航栏表格背景、文字颜色定义 */
+{
+	color: #ffffff;
+	height: 22;
+	background-image: url(/templets/default/images/ocean/menu_bg2.gif);
+	padding-left: 33px;
+
+}
+.top_nav_menu_ggkf /* 导航栏表格背景、文字颜色定义 */
+{
+	color: #ffffff;
+	height: 22;
+	padding-left: 33px;
+
+}
+.top_path /* 您现在的位置表格背景、文字颜色定义 */
+{
+width: 760;background:#ffffff;height: 30;
+}
+.top_userlogin /* 顶部用户登录文字链接的css定义 */
+{
+color: #037fa8
+}
+/* ==top.asp中的css定义结束== */
+
+/* ==网页中部中的css定义开始== */
+.center_tdbgall /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:980px;
+}
+.center_tdbgall0 /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:720px;
+}
+.center_tdbgalljdbg /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:950px;
+}
+.center_tdbgall_ggkf /* 改革开放中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:850px;
+}
+.center_tdbgall_ggkfnr /* 改革开放中部内容页表格总背景颜色定义 */
+{
+background:#ffffff;
+width:600px;
+}
+/* ==网页中部wyq中的css定义开始== */
+.center_tdbgall_wyq /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:666px;
+}
+.center_tdbgall_xzlb /* 乡镇联播栏目页中部表格总背景颜色定义 */
+{
+background:#ffffff;
+}
+　　/* --网页中部左栏的css定义开始-- */
+.left_tdbgall /* 左栏表格总背景颜色定义 */
+{
+background:#ffffff;
+}
+.left_title /* 左栏标题表格背景、文字颜色定义 */
+{
+	font-weight:bold;
+	color: ffffff;
+	height: 28px;
+	padding-left:20px;
+	text-align: left;
+	background-image: url(/templets/default/images/ocean/right_t.gif);
+	width: 182px;
+}
+.left_tdbg1 /* 左栏内容表格背景、文字颜色定义 */
+{
+	padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
+	border-top-style: none;	border-bottom-style: none;	border-color: #a4c6fc;border-right-style: solid;border-left-style: solid;
+}
+.left_tdbg2 /* 左栏底部表格背景、文字颜色定义 */
+{
+	height: 10px;
+	background-image: url(/templets/default/images/ocean/tdbg_bottom.gif);
+	background-repeat: no-repeat;
+}
+.right_title_bs06 /* 右栏标题表格背景、文字颜色定义 */
+{
+	font-weight:bold;
+	color: ffffff;
+	height: 28px;
+	padding-left:20px;
+	text-align: left;
+	background-image: url(/templets/default/images/ocean/right_t.gif);
+}
+.right_title /* 左栏标题表格背景、文字颜色定义 */
+{
+background:url(/templets/default/images/blue/right_title.gif);font-weight:bold;color: ffffff;height: 28;width:180;padding-left:40;text-align: left;
+}
+　　/* --网页中部左栏的css定义结束-- */
+　　/* --网页中部中栏的css定义开始-- */
+.main_tdbgall /* 中栏表格总背景颜色定义 */
+{
+width: 572;background:#ffffff;
+}
+.main_tdbgallu /* 中栏表格总背景颜色定义 */
+{
+width: 800;background:#ffffff;
+}
+.main_tdbgall_ggkf /* 改革开放中栏表格总背景颜色定义 */
+{
+width: 840;background:#ffffff;
+}
+.main_tdbgall_xzlb /* 乡镇联播中栏表格总背景颜色定义 */
+{
+background:#ffffff;
+}
+.main_shadow /* 中栏内容间隔表格背景颜色定义(575) */
+{
+height: 4;
+}
+.main_announce /* 中栏公告表格背景、文字颜色定义 */
+{
+color: 037fa8;height: 25;background:#f9f9f9;border: 1px solid #d2d3d9;
+}
+.main_search /* 中栏搜索表格背景、文字颜色定义 */
+{
+color: 037fa8;height: 25px;border: 1px solid #d2d3d9;background:#f9f9f9;
+}
+.main_top /* 中栏最新推荐表格背景颜色定义 */
+{
+background:url(/templets/default/images/blue/main_top.gif);height: 187;
+}
+.main_title_760i /* 网站首页中栏标题表格背景、文字颜色定义(760) */
+{
+color: ffffff;
+background-image: url(/templets/default/images/ocean/main_bs.gif);
+border-right: 1px solid #1c65be;
+text-align: left;padding-left:30;height: 27;
+
+}
+.main_tdbg_760i /* 网站首页中栏内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;
+}
+.main_title_575 /* 中栏标题表格背景、文字颜色定义(575) */
+{
+    font-weight: bold;
+	color: #000000;
+	
+	height: 27px;
+	padding-left: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #cccccc;
+}
+.main_title_575_ggkf /* 中栏标题表格背景、文字颜色定义(575) */
+{
+    font-weight: bold;
+	color: #000000;
+	height: 27px;
+	padding-left: 30px;
+}
+.main_title_575_xzlb /* 乡镇联播中栏标题表格背景、文字颜色定义(575) */
+{
+    font-weight: bold;
+	color: #000000;
+	height: 27px;
+	padding-left: 30px;	
+}
+.main_title_bs06 /* 中栏标题表格背景、文字颜色定义(bs06) */
+{
+	color: ffffff;
+	text-align: left;
+	padding-left:30px;
+	height: 27px;
+	background-image: url(/templets/default/images/ocean/main_bs.gif);
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+	font-weight: bold;
+}
+.main_tdbg_bsd06 /* 中栏内容表格背景、文字颜色定义(bsd06) */
+{
+	color: ffffff;	height: 4px;	background-image: url(/templets/default/images/ocean/main_02.gif);
+}
+.main_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
+{
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #aec6e8;
+	border-bottom-color: #aec6e8;
+	border-left-color: #aec6e8;
+	background-image: url(/templets/default/images/ocean/main_bg.gif);
+	background-color: #ffffff;
+}
+.main2_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
+{
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #aec6e8;
+	background-image: url(/templets/default/images/ocean/main_bg.gif);
+	background-color: #ffffff;
+}
+
+.main_tdbg_575 /* 中栏内容表格背景、文字颜色定义(575) */
+{
+	border: 1px solid #d2d3d9;
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	width: 970px;
+}
+.main_tdbg_57588 /* 中栏内容表格背景、文字颜色定义(575) */
+{
+	border: 1px solid #d2d3d9;
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	width: 800px;
+}
+.main_title_282i,.main_title_282 /* 栏目文章列表标题表格背景、文字颜色定义(282) */
+{
+background:url(/templets/default/images/ocean/main_bs.gif);color: ffffff;height: 27;
+padding-left:30;
+color: ffffff;
+text-align: left;
+border-right: 1px solid #1c65be;
+font-weight: bold;
+}
+.main_tdbg_282i /* 栏目文章列表内容表格背景、文字颜色定义(282) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;
+}
+
+.main_tdbg_282 /* 栏目文章列表内容表格背景、文字颜色定义(282) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;
+}
+.listbg /* --栏目文章列表内容间隔颜色的定义1-- */
+{
+background:#ffffff;
+}
+.listbg2 /* --栏目文章列表内容间隔颜色的定义2-- */
+{
+background:#f7f7f7;
+}
+　　/* --网页中部中栏的css定义结束-- */
+　　/* --文章显示页的css定义开始-- */
+
+.main_articletitle /* 主标题文字颜色定义 */
+{
+color: ff0000;font-weight:bold;font-size: 18;line-height: 150%;
+}
+.main_articlesubheading /* 副标题文字颜色定义 */
+{
+color: 037fa8;font-weight:bold;line-height: 150%;
+}
+.main_title_760 /* 标题导航表格背景、文字颜色定义(760) */
+{
+
+background:url(/templets/default/images/ocean/main_bs1.gif);border: 1px solid #d2d3d9;height: 28;color: ffffff;
+}
+.main_title_760_xzlb /* 乡镇联播内容页标题导航表格背景、文字颜色定义(760) */
+{
+
+border: 1px solid #d2d3d9;height: 28;color: 000000;
+}
+.main_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;padding: 8;line-height: normal;
+}
+.main_tdbg_760_xzlb /* 乡镇联播内容表格背景、文字颜色定义(760) */
+{
+	padding: 8;
+	line-height: 25px;
+	font-size: 16px;
+	border-top: 1px solid #d2d3d9;
+	border-right: 1px none #d2d3d9;
+	border-bottom: 1px solid #d2d3d9;
+	border-left: 1px none #d2d3d9;
+	text-indent: 32px;
+}
+.main_tdbg_760_hb /* 环保局 表格背景、文字颜色定义(760) */
+{
+	padding: 8;
+	line-height: 25px;
+	font-size: 16px;
+	border-top: 1px solid #d2d3d9;
+	border-right: 1px solid #d2d3d9;
+	border-bottom: 1px solid #d2d3d9;
+	border-left: 1px solid #d2d3d9;
+	text-indent: 32px;
+}
+.main_tdbg_666 /* 内容表格背景、文字颜色定义(666) */
+{
+	padding: 8;
+	line-height: 25px;
+	font-size: 16px;
+	border-top: 1px solid #d2d3d9;
+	border-right: 1px none #d2d3d9;
+	border-bottom: 1px solid #d2d3d9;
+	border-left: 1px none #d2d3d9;
+	text-indent: 32px;
+}
+.article_tdbgall /* 责编等表格背景、文字颜色定义(760) */
+{
+background:#f5f5f5;
+}
+
+　　/* --文章显示页的css定义结束-- */
+　　/* --留言频道css定义开始-- */
+/* 留言栏目标题文字链接的css定义－－调用代码为<a class='guest' ***>***</a> */
+a.guest:link {color: #ffffff;}
+a.guest:visited {color: #ffffff;}
+a.guest:hover{color: #ff0000;}
+a.guest:active {color: #ffffff;}
+
+.guest_title_760 /* 标题导航表格背景、文字颜色定义(760) */
+{
+background:url(/templets/default/images/ocean/main_bs1.gif);border: 1px solid #d2d3d9;padding-left:5;height: 29;color: ff0000;
+}
+.guest_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;padding: 8;
+}
+.guest_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #449ae8;
+}
+.guest_title /* 标题背景颜色定义(760) */
+{
+background:#449ae8;color: #ffffff;font-weight: normal;height: 25;
+}
+.guest_tdbg /* 表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+.guest_tdbg_1px /* 留言显示1px表格背景颜色定义 */
+{
+background:#d2d3d9;
+}
+.guest_border2 /* 回复表格虚线边框背景颜色定义(760) */
+{
+border: 1px dashed #97d2df;background:#e8f5f8;color: #006633;
+}
+.guest_replyadmin /* 管理员回复文字背景颜色定义(760) */
+{
+color: #ff0000;
+}
+.guest_replyuser /* 用户回复文字背景颜色定义(760) */
+{
+color: #449ae8;
+}
+　　/* --留言频道css定义结束-- */
+　　/* --商城的css定义开始-- */
+.shop_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #1C65BE;
+}
+.shop_border3 /* 灰色表格边框背景颜色定义(760) */
+{
+border: 1px solid #cccccc;
+}
+.shop_title /* 标题背景颜色定义(760) */
+{
+    font-weight: bold;
+	color: #ffffff;
+	background-image: url(/templets/default/images/ocean/main_bs1.gif);
+	height: 27px;
+	padding-left: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+}
+.shop_tdbg /* 表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+.shop_tdbg2 /* 表格背景颜色定义2 */
+{
+background:#f5f5f5;line-height: 120%;
+}
+.shop_tdbg3 /* 表格背景颜色定义3 */
+{
+background:#ffffff;line-height: 120%;
+}
+.shop_tdbg4 /* 表格背景颜色定义4 */
+{
+background:#e1f4ee;line-height: 120%;
+}
+
+　　/* --商城的css定义结束-- */
+/* ==网页中部中的css定义结束== */
+
+/* ==bottom.asp中的css定义开始== */
+.bottom_tdbgall /* 底部表格总背景颜色定义 */
+{
+width: 760;background:#ffffff;
+}
+.bottom_adminlogo /* 管理信息表格背景、文字颜色定义 */
+{
+background:#0089f7;color:#ffffff;
+}
+.bottom_copyright /* 版权信息表格背景、文字颜色定义 */
+{
+background:#ffffff;color:#000000;
+}
+/* ==bottom.asp中的css定义结束== */
+
+/* ==自选风格中的css定义结束== */
+.menu
+{
+background-color: #cccccc;width:97%;border: 1px;
+}
+.menubody
+{
+background-color: #ffffff;
+}
+/* ==自选风格中的css定义结束== */
+.channel_font /* 搜索等特殊文字颜色定义 */
+{
+color: red;
+}
+/* --评论显示页的css定义开始-- */ 
+.guest_font /* 隐藏、用户等特殊文字颜色定义 */
+{
+color: green;
+}
+/* --评论显示页css定义结束-- */
+/* --留言频道css定义开始-- */
+/* 留言栏目标题文字链接的css定义－－调用代码为<a class='guest' ***>***</a> */
+a.guest:link {color: #000000;}
+a.guest:visited {color: #000000;}
+a.guest:hover{color: #ff6600;}
+a.guest:active {color: #000000;} 
+
+/* 站内链接文字颜色定义 */
+a.channel_keylink{text-decoration: underline;}
+a.channel_keylink:link {color: blue;}
+a.channel_keylink:visited {color: blue;}
+a.channel_keylink:hover{color: #ff0000;}
+a.channel_keylink:active {color: blue;}
+
+/* --用户控制css定义开始-- */
+.user_left /*左区块定义*/
+{
+background:#f3f3f3;width:170px;padding-left: 4px;border-left-width: 2px;border-left-style: solid;border-left-color: #ffffff;padding-right: 4px;
+}
+.user_box/*左区块内标题栏定义*/
+{
+border: 1px solid #bfbfbf;background-color: #ffffff;border-collapse:15;
+}
+.user_righttitle {
+background-color: #f3f3f3;padding-top: 5px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;
+border-top-width: 2px;border-right-width: 2px;border-bottom-width: 1px;border-left-width: 2px;
+border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;
+border-top-color: #ffffff;border-right-color: #ffffff;border-bottom-color: #bfbfbf;border-left-color: #ffffff;
+}
+.user_line {
+line-height: 1px;background-image: url(/templets/default/images/ocean/line.gif);
+}
+.user_toolstop/*左区块内标题栏定义*/
+{
+line-height: 28px;font-size: 12px;font-weight: bold;color: #666666;padding-left: 10px;letter-spacing: 4pt;
+}
+.user_toolsbot/*左区块内内容定义*/
+{
+line-height: 25px;font-size: 12px;color: #666666;border-right-width: 4px;border-right-style: solid;border-right-color: #ffffff;
+}
+.user_toolspoint/*区块内箭头栏定义*/
+{
+padding-left: 6px;
+}
+
+/*用户控制面板右*/
+.user_right {
+background-color: #ffffff;padding-right: 2px;padding-left: 6px;width:572px;
+}
+.border1
+{
+border: 1px solid #bfbfbf;
+}
+
+.title
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.border
+{
+border: 1px solid #449ae8;
+}
+.tdbg
+{
+background:#FDFDFD;
+}
+.tdbgmouseover{
+background:#bfdfff;line-height: 50%;
+}
+.tdbg2
+{
+background:#e0eef5;line-height: 50%;
+}
+.tdbg5
+{
+background:#e0eef5;line-height: 50%;
+}
+.title5
+{
+width:80px;background:url('../user/images/titlebg2.gif');line-height: 120%;padding-top:2px;cursor:hand;
+}
+.title6
+{
+width:80px;background:url('../user/images/titlebg1.gif');color: #ffffff;font-weight: normal;padding-top:2px;cursor:hand;
+}
+.button1
+{
+width:90px;
+}
+.show_page {
+text-align: center;
+}
+
+
+/* 固定排课表格表格的css定义*/
+.date_border
+{
+border: 1px solid ;
+}
+.date_title
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.date_tdbg
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.style2
+{
+font-size: 10px;
+}
+.style3
+{
+font-size: 12px;
+}
+
+/* ==rss连接框定义== */
+#popitmenu {
+    border-right: black 1px solid; border-top: black 1px solid; z-index: 100; visibility: hidden; font: 12px/18px verdana; border-left: black 1px solid; border-bottom: black 1px solid; position: absolute; background-color: white
+}
+#popitmenu a {
+    display: block; padding-left: 6px; color: black; text-decoration: none;
+}
+#popitmenu a:hover {
+    background-color: #ccff9d;
+}
+
+/* ==用户登录框定义== */
+.userbox{
+background:url(/templets/default/images/ocean/login_02b.gif);
+height:93px;
+background-repeat: no-repeat;
+background-position: center center;
+}
+#userlogined
+{
+    padding-left:10;text-align: left;
+}
+#userlogin input{height:20px;}
+#userctrl
+{
+    text-align: center;
+}
+#usermessage
+{
+    padding-left:10;text-align: left;
+}
+.userlog{
+color:#ffffff;
+}
+.havemessage
+{
+    background-color: #ccff9d;
+}
+.havemessaged
+{
+    background-color: #cc0000;
+}
+.bloglist  /* 聚合空间列表定义 */
+{
+width: 100%;text-align: center;
+}
+.bloglist_image
+{
+text-align: center;
+}
+.bloglist_intro
+{
+text-align: center;
+}
+#showbloglist_more
+{
+text-align: right;padding-right:10;
+}
+/* ==供求信息div按钮定义开始== */
+#supply{
+margin:0px;
+padding:0px;
+color:#fff;
+}
+.supplybut,.supplybutover{
+margin:0px;
+padding:1px;
+line-height:25px;
+border-top: 1px solid #d2d3d9;border-right: 1px solid #d2d3d9;border-left: 1px solid #d2d3d9;text-align: left;padding-left:30;padding-right:15px;
+display: block;
+float:left;
+margin-right:8px;
+cursor:hand;
+}
+.supplybut{
+background:url(/templets/default/images/blue/main_title_575.gif);
+}
+.supplybutover{
+background:url(/templets/default/images/blue/main_title_282.gif);
+}
+/* ==供求信息div按钮定义开始== */
+.right_tdbgbs06 {
+padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
+	border-top-style: none;	border-bottom-style: none;	border-color: #a4c6fc;border-right-style: solid;border-left-style: solid;
+}
+.right_tdbg2 {
+	background-image: url(/templets/default/images/ocean/tdbg_bottom.gif);
+	background-repeat: no-repeat;
+	height: 10px;
+}
+.main_title_bsf {
+	font-weight: bold;
+	color: #ffffff;
+	background-image: url(/templets/default/images/ocean/main_bs1.gif);
+	height: 27px;
+	padding-left: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+}
+.mainblinks {
+	background-image: url(/templets/default/images/ocean/links_02.gif);
+	height: 27px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.menu_bottombg {
+	color: #ffffff;
+	background-image: url(/templets/default/images/ocean/menu_bottombg.gif);
+	height: 31px;
+}
+.bottom_bg {
+	background-image: url(/templets/default/images/ocean/bottom_bg.gif);
+}
+.showa {
+	color: #aed2fe;
+}
+.menu_s {
+	color: #ffffff;
+	background-image: url(/templets/default/images/ocean/menu_bg.jpg);
+	height: 26px;
+}
+/* --公告显示文字(滚动条)的css定义开始-- */
+.AnnounceBody2 {color:#000000;}
+a.AnnounceBody2:link {color: #000000;}
+a.AnnounceBody2:visited {color: #000000;}
+a.AnnounceBody2:hover{color: #ff0000;}
+a.AnnounceBody2:active {color: #000000;}
+/* --公告显示文字(滚动框)的css定义开始-- */
+.AnnounceBody1 {color:#000000;}
+a.AnnounceBody1:link {color: #000000;}
+a.AnnounceBody1:visited {color: #000000;}
+a.AnnounceBody1:hover{color: #ff0000;}
+a.AnnounceBody1:active {color: #000000;}
+/* --公告显示文字(滚动框、滚动条)的css定义结束-- */
+hr
+{
+height:1px;
+color:#5575B0；
+}
+/* --房产信息列表表格css定义开始-- */
+.houselistbg /* --房产信息列表内容间隔颜色的定义1-- */
+{
+background:#ffffff;
+}
+.houselistbg2 /* --房产信息列表内容间隔颜色的定义2-- */
+{
+background:#f6f9ff;
+}
+.houseth{
+background:#e6f5ff;
+}
+.housetable{
+border: 1px solid #ffffff;
+border-collapse: collapse;
+}
+}.fc_1 {
+	background-attachment: fixed;
+	background-color: #FFFFFF;
+	background-image: url(/templets/default/images/fc/ffbb1.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 25px;
+	width: 290px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E3E3E3;
+}
+.main_title_575fc /* 中栏标题表格背景、文字颜色定义(575) */
+{
+	font-weight: bold;
+	color: #000000;
+	height: 27px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C8C8C8;
+	width: 660px;
+}
+.main_tdbg_575fc /* 中栏内容表格背景、文字颜色定义(575) */
+{
+	border: 1px solid #d2d3d9;
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	width: 970px;
+	background-image: url(/templets/default/images/fc/cgj_bj_1.gif);
+}
+.center_tdbgallp /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:660px;
+}
+/* --房产信息列表表格css定义结束--
+
+
+/* ==环保局 栏目 网页中部中的css定义开始== */
+.center_tdbgall_hb /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:750px;
+}
+.main_tdbgall_hb /* 环保局 中栏表格总背景颜色定义 */
+{
+background:#ffffff;
+.main_title_575_hb /* 环保局 中栏标题表格背景、文字颜色定义(575) */
+{
+    font-weight: bold;
+	color: #000000;
+	height: 27px;
+         width:750px;
+}
+.main_tdbg_575_hb /* 环保局 中栏内容表格背景、文字颜色定义(575) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;width:750px;
+}
+.xzlb_wyqdh {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #005FA2;
+	text-align: center;
+}
+.xzlb_wyqnr {
+	background-color: #FFFFFF;
+	padding: 5px;
+	border: 1px solid #005FA2;
+}
+/* 内容当前导航文字链接的css定义－－调用代码为<a class='LinkPath' ***>***</a> */
+a.LinkPath:link {color: #000000;}
+a.LinkPath:visited {color: #000000;}
+a.LinkPath:hover{color: #000000;}
+a.LinkPath:active {color: #000000;}
+.wyqlh09 {
+	font-weight: bold;
+	color: #FFFF00;
+	text-indent: 30pt;
+}
+.lhwk09 {
+	padding: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 2px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FE0000;
+	border-right-color: #FE0000;
+	border-bottom-color: #FE0000;
+	border-left-color: #FE0000;
+	margin-bottom: 5px;
+}
+.danghang {
+	border: 2px solid #FFFF00;
+	padding-left: 10px;
+}
+/* --友情导航的css定义开始-- */
+.yqwzl {
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #339900;
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #006600;
+	margin-left: 8px;
+	margin-top: 5px;
+}
+#yqwzlan {
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #FF0000;
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #FF0000;
+	margin-left: 8px;
+}
+#yqwz_1 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #993300;
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #993300;
+	margin-left: 8px;
+}
+#yqwz_2 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #FF3366;
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #FF3366;
+	margin-left: 8px;
+}
+#yqwz_3 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #663366;
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #663399;
+	margin-left: 8px;
+}
+#yqwz_4 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #993300;
+	clear: both;
+	height: 20px;
+	width: 950px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #996600;
+	margin-left: 8px;
+}
+.yqnr_1 {
+	clear: both;
+	width: 960px;
+	background-color: #FFFFFF;
+	margin-left: 8px;
+}
+.wengzhi_1 {
+	background-color: #EEF0FF;
+	clear: both;
+	width: 965px;
+	font-family: "宋体";
+	font-size: 14px;
+	color: #FF0000;
+	height: 20px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.213 {
+	clear: both;
+	width: 980px;
+	border: 1px solid #006699;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.sytd td {
+	font-family: "宋体";
+	font-size: 10.5pt;
+	line-height: 145%;
+	font-weight: normal;
+	word-spacing: -6px;
+}
+/* 首页小分类文字等css定义 */
+.wyqlj1 {
+	float: left;
+	font-size: 12px;
+	color: #0033CC;
+	background-position: center bottom;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	background-repeat: no-repeat;
+	line-height: 25px;
+	font-weight: bold;
+}
+/* 首页小分类2文字等css定义 */
+.wyqlj2 {
+	float: left;
+	font-size: 12px;
+	line-height: 25px;
+	color: #005FA2;
+	background-position: center bottom;
+	height: 25px;
+	width: 100px;
+	text-align: center;
+	background-repeat: no-repeat;
+}
+
+/* ==友情导航的css定义结束== */
+.lianjie_ {
+	line-height: 20px;
+	clear: both;
+	width: 970px;
+	font-size: 12px;
+	font-style: normal;
+	height: 20px;
+	display: table-row;
+}
+.main_title_760_1 /* 公告标题导航表格背景、文字颜色定义(760) */
+{
+	height: 28;
+	color: #006600;
+	background-image: url(/templets/default/images/index_r9_c2.jpg);
+	background-repeat: no-repeat;
+	width: 980px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.cgj_2 {
+	background-color: #FFFFFF;
+	clear: both;
+	height: 250px;
+	width: 99%;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #A7CCDE;
+	border-bottom-color: #A7CCDE;
+	border-left-color: #A7CCDE;
+}
+.cgj_wz {
+	font-size: 14px;
+	font-weight: bold;
+	color: #336699;
+	height: 20px;
+	width: 70px;
+	margin-left: 20px;
+}
+.center_tdbgallk /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:760px;
+}
+
+/* CSS Document */
+
+/* CSS Document */
+
+/* CSS Document */
+
+/* 以下为滑门的css定义*/
+/* 交互式导航的css定义*/
+.jiaohu1{
+	height:25px;
+	background-image: url(/templets/default/images/hd_up_bg.gif);
+} 
+.jiaohu3{
+	height:108px;
+	background-image: url(/templets/default/images/hd_up_bg.gif);
+} 
+.jiaohu2{
+	height:25px;
+	background-image: url(/templets/default/images/hd_up_bg1.gif);
+	background-repeat: repeat-x;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* 定义表格边框为1,边框颜色 #B8CAA2 ,实线,上面为空 */
+.bg03{
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+
+
+
+/* 定义表格边框为1,边框颜色 #B8CAA2 ,实线,右面为空,下面为空 */
+.bg05{font-size: 12px;color: #0000FF;}.bixan {
+	height: 20px;
+}
+.bg06{
+	font-size: 12px;
+	color: #0000FF;
+	background-image: url(/templets/default/images/lingtao.gif);
+}
+
+
+a.bb:link {color: #000000;}                            /* 未访问的链接，黑颜色*/ 
+a.bb:visited {color: #000000;}                        /*已访问的链接， 黑颜色*/ 
+a.bb:hover{COLOR: #FF0000;}              /* 鼠标在链接上，red颜色*/ 
+a.bb:active {color: #FF0000;}                      /* 点击激活链接，黑颜色*/ 
+
+.lbxx{background:url(/templets/default/images/cgj_bj_1.gif)  bottom  repeat-x} 　　 /* 定义背景虚线*/
+/* 以下为滑门的css定义*/
+/* 交互式导航的css定义*/
+.jiaohu11{
+	height:35px;
+	font-weight: normal;
+	background-image: url(/templets/default/images/lingtao.gif);
+	background-repeat: repeat-x;         
+} 
+.jiaohu21{
+	height:35px;
+	background-image: url(/templets/default/images/lingtao.gif);
+}
+a:link {
+ color: #333333;
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: underline;
+ color: #FF0000;
+}
+a:active {
+ text-decoration: none;
+}
+img{
+border:none}
+
+a.bbb:link {
+	font-size: 14px;
+}                            /* 未访问的链接，黑颜色*/ 
+a.bbb:visited  {
+	font-size: 14px;
+}                                /*已访问的链接， 黑颜色*/ 
+a.bbb:hover {
+	font-size: 14px;
+}                      /* 鼠标在链接上，red颜色*/ 
+a.bbb:active  {
+	font-size: 14px;
+}                              /* 点击激活链接，黑颜色*/ 
+
+.lbbxx{
+	font-size: 14px;
+} 　　 /* 定义背景虚线*/
+
+
+a.top:link {color: #ff0000;font-weight: bold;}
+a.top:visited {color: #ff0000;font-weight: bold;}
+a.top:hover{color: #FF0000;font-weight: bold;}
+a.top:active {color: #FF0000;font-weight: bold;}
+
+
+.yxw_xiantiao_1 {
+	background-color: #CCCCCC;
+	clear: left;
+	float: left;
+	height: 1px;
+	width: 828px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.yxw_tuijialtaohang {
+	font-size: 13px;
+	font-weight: bold;
+	color: #006;
+	border-left-width: 0px;
+	border-left-style: dashed;
+	border-left-color: #333;
+}
+.yxw_tuijialtaohang_1 {
+	font-size: 13px;
+	font-weight: bold;
+	color: #006;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #999;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #999;
+}
+.wyq_xiantia_2 {
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	border-bottom-color: #CCC;
+}
+.yxw_tjlj {
+	line-height: 16px;
+	color: #F00;
+}
+.yxw_tjlj_1 {
+	line-height: 20px;
+	color: #F00;
+}
+.yxw_riligd {
+	line-height: 15px;
+}
+#lf_990 {
+	background-color: #FFF;
+	clear: left;
+	height: auto;
+	width: 990px;
+	margin-right: auto;
+	margin-left: auto;
+}
+ul ,li {list-style: none;}
+#yxw_gdzm {
+	background-image: url(/templets/default/images/yxw/gdzm.jpg);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 835px;
+	font-size: 13px;
+	line-height: 29px;
+}
+　
+.lbxxxx{
+	line-height: 28px;
+	font-size: 14px;
+	background-color: #FFF;
+	background-image: url(/templets/default/images/cgj_bj_1.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.nrongwz {
+	font-size: 18px;
+	font-weight: bold;
+	color: #900;
+	line-height: 35px;
+}
+
+#yxw_idex_990 {
+	height: 100%;
+	width: 990px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+#index_logo {
+	clear: left;
+	float: left;
+	height: 150px;
+	width: 155px;
+}
+#index_lgog_1 {
+	clear: left;
+	float: left;
+	height: 85px;
+	width: 155px;
+}
+#index_logo_2 {
+	clear: left;
+	float: left;
+	height: 100%;
+	width: 155px;
+	overflow: hidden;
+}
+#index_2012_top {
+	clear: right;
+	float: right;
+	height: 150px;
+	width: 830px;
+}
+.index_2012_top_1 {
+	clear: right;
+	float: right;
+	height: 100%;
+	width: 830px;
+	overflow: hidden;
+	line-height: 30px;
+}
+.index_2012_top_2 {
+	clear: right;
+	float: right;
+	height: 100%;
+	width: 830px;
+	overflow: hidden;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C30;
+}
+#index_rl {
+	float: left;
+	height: 30px;
+	width: 170px;
+}
+#index_rl_1 {
+	float: left;
+	height: 30px;
+	width: 122px;
+}
+#index_rl_2 {
+	float: left;
+	height: 20px;
+	width: 160px;
+	padding-top: 5px;
+}
+#index_rl_3 {
+	float: left;
+	height: 30px;
+	width: 60px;
+}
+#index_rl_4 {
+	float: left;
+	height: 30px;
+	width: 226px;
+}
+#index_rl_5 {
+	float: left;
+	height: 30px;
+	width: 80px;
+	text-align: center;
+}
+#index_rl_6 {
+	float: left;
+	height: 30px;
+	width: 90px;
+	text-align: center;
+	line-height: 30px;
+}
+#index_rl_7 {
+	float: right;
+	height: 30px;
+	width: 730px;
+	text-align: center;
+}
